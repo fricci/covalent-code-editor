@@ -88,6 +88,7 @@ export class TdCodeEditorComponent implements OnInit, AfterViewInit, ControlValu
         /* tslint:disable-next-line */
         this._isElectronApp = ((<any>window)['process']) ? true : false;
         if (this._isElectronApp) {
+            console.log('Getting path');
             this._appPath = electron.remote.app.getAppPath().split('\\').join('/');
         }
     }
